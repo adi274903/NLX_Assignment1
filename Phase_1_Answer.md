@@ -6,7 +6,7 @@ The domain selected by me would be related to Healthcare and the contribution of
 **2. Task Definition:**
 For the given assignment, I would be taking up the following tasks to evaluate the capabilities of each AI model:
 
-- *Classification/Analysis:* Categorizing or evaluating complex information like complex information like symptoms for detection of diseases.
+- *Classification/Analysis:* Categorizing or evaluating complex information from transcript and correctly giving the ICD, CPT and HCPCS code for the same.
 
 - *Generation/Creation:* Producing healthcare related content from these clinical notes/ knowledge sources for the LLM to summarize to the patient, as to symptoms, diagnosis and the procedure done to treat it.
 
@@ -37,7 +37,7 @@ A domain specific Gemma3 model trained on multiple healthcare related data and h
 **Evaluation Criteria:**
 The given models will be evaluated by using the given methodologies:
 
-- *Classification/Analysis:* Categorizing or evaluating complex information like symptoms for detection of disease and scoring based on accuracy.
+- *Classification/Analysis:* Categorizing or evaluating complex information from transcript and correctly giving the ICD, CPT and HCPCS code for the same.
 
 - *Generation/ Creation:* The model will be assessed based on how well the model summarizes the text based on 2 categories (patient facing and clinician facing). The given will be rated on Likert Scale (0-5) of agreement or disagreement with the response/ summarization done by the given AI model.
 
