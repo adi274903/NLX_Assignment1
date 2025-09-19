@@ -12,7 +12,7 @@ Categorizing or evaluating complex information from transcript and identifying t
 - CLEAR PROMPT: 
 
 *Prompt:*
-You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Given is the paragraph for it.
+You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Give a 1 sentence answer. Given is the paragraph for it.
 
 "This condition presents with increased thirst, frequent urination, fatigue, blurred vision, and slow-healing wounds. It is caused by the body’s ineffective use of insulin leading to elevated blood glucose levels. Diagnosis includes blood tests such as fasting glucose and HbA1c. Treatment involves lifestyle changes like a balanced diet and regular exercise to control blood sugar, oral medications like metformin, and insulin therapy if needed. Managing complications such as nerve damage, kidney issues, and cardiovascular problems is critical."
 
@@ -57,7 +57,7 @@ Failure could occur due to context length as the transcript/ case is a paragraph
 - Chain-of-Thought PROMPT:
   
 *Prompt:*
-You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Given is the paragraph for it.
+You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Give a 1 sentence answer. Given is the paragraph for it.
 
 "This condition presents with increased thirst, frequent urination, fatigue, blurred vision, and slow-healing wounds. It is caused by the body’s ineffective use of insulin leading to elevated blood glucose levels. Diagnosis includes blood tests such as fasting glucose and HbA1c. Treatment involves lifestyle changes like a balanced diet and regular exercise to control blood sugar, oral medications like metformin, and insulin therapy if needed. Managing complications such as nerve damage, kidney issues, and cardiovascular problems is critical."
 
