@@ -15,3 +15,6 @@ Paper: https://arxiv.org/abs/2507.05201
 *MedQA*: The following is a curated Dataset made by Chengdu University of IT in collaboration with Purdue University for testing and evaluation of medical LLMs.
 Link to the Dataset: https://github.com/jind11/MedQA
 Paper: https://arxiv.org/abs/2501.05464
+
+*ICD Resources:* Following is the diagnostic based codes and databse made available for use by the MIMIC IV, physionet organization. It is the standard set of codes used by clinicians across the world and established by WHO.
+Link: https://physionet.org/content/mimiciv/3.1/
