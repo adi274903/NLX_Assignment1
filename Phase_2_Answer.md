@@ -6,6 +6,7 @@ The following are the prompts used per task:
 **1. Classification/Analysis:**
 
 Categorizing or evaluating complex information from transcript and correctly giving the ICD, CPT and HCPCS code for the same.
+
 ------
 - CLEAR PROMPT: 
 
@@ -43,7 +44,7 @@ CPT: 99212–99215
 There could be potential for failure as no examples are given for the AI model to give the exact output. I would consider it giving any of the CPT codes i nthe given range as a success for the given prompt. It could still go to the ICD 10 databse which would be problematic.
 
 
-****
+----
 - Few-Shot PROMPT:
 
 *Prompt:*
@@ -82,7 +83,7 @@ CPT: 99212, 99213
 The prompt could result in problems as CPT code might be a range and not just 2 numbers. The prompt might also fail if AI does refer to a different databse, which it should not due to the provided examples.
 
 
-****
+----
 - Chain-of-Thought PROMPT:
 
 *Prompt:*
@@ -123,11 +124,12 @@ AI could always refer to other CPT codes not associated with the given disease o
 
 
 
-
+****
 **2. Generation/ Creation:**
 
 The model will be assessed based on how well the model summarizes the text based on 2 categories (patient facing and clinician facing).
 
+----
 - CLEAR PROMPT: 
 
 *Prompt:*
@@ -136,6 +138,7 @@ The model will be assessed based on how well the model summarizes the text based
 *Reasoning:* 
 The given prompt is based
 
+----
 - Few-Shot PROMPT:
 
 *Prompt:*
@@ -154,12 +157,13 @@ The given prompt is based
 
 
 
-
+****
 
 **3. Question-Answering:**
 
 The model will be assessed based on a specific prompt and its accuracy in answering the question. A dataset containing 3Q & A with the exact verifiable prognosis/ treatment/ procedure would be made to assess the model’s domain knowledge and specificity. MedQA is a dataset that would be used for evaluation.
 
+----
 
 - CLEAR PROMPT: 
 
@@ -169,6 +173,8 @@ The model will be assessed based on a specific prompt and its accuracy in answer
 *Reasoning:* 
 The given prompt is based
 
+----
+
 - Few-Shot PROMPT:
 
 *Prompt:*
@@ -176,6 +182,8 @@ The given prompt is based
 
 *Reasoning:* 
 The given prompt is based
+
+----
 
 - Chain-of-Thought PROMPT:
 
