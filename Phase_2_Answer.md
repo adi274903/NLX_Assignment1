@@ -43,7 +43,7 @@ CPT: 99212–99215
 There could be potential for failure as no examples are given for the AI model to give the exact output. I would consider it giving any of the CPT codes i nthe given range as a success for the given prompt. It could still go to the ICD 10 databse which would be problematic.
 
 
-
+****
 - Few-Shot PROMPT:
 
 *Prompt:*
