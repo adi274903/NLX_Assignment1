@@ -118,6 +118,7 @@ Reasoning: XXXX
 *Reasoning:* 
 The given prompt is based on the Few shot, CLEAR and reasoning. The given is for reasonign through the databse, finding appropriate codes and giving output based on the given codes. An example was given so that the AI could structure the response and give response in the format.
 
+
 *Failure:*
 AI could always refer to other CPT codes not associated with the given disease or not in the given range as CPT codes are different based on outpatient, inpatient, etc. 
 
@@ -193,6 +194,12 @@ Also give your reasoning as to why you structured your summary the way you did.
 
 *Reasoning:* 
 The given prompt is based on the CLEAR prompt and now asks for the explanation for the given summary. This will assess how well the model performs the COT process and will be scored based on the Likert Scale for its reasoning and summarization.
+
+*Expected Output:*
+Summary of the given case and its reasoning.
+
+"You have been diagnosed with [disease], due to [cause] and will be treated as follows [treatment/ procedure]."
+Reasoning: XXXX
 
 *Failure:*
 Context length could be a failure and an incomplete answer might be given for the same. 
