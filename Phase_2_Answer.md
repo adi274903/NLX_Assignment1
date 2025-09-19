@@ -133,28 +133,69 @@ The model will be assessed based on how well the model summarizes the text based
 - CLEAR PROMPT: 
 
 *Prompt:*
+You are a transcription and medical expert who needs to explain to a 30 year old patient what condition they have alongwith the treatment they would be provided by the medical expert overseeing their case. Ensure you summarize it in 100 words maximum and also assess the patient's health status. Below is the a paragraph regarding it.
 
+"This case involves a progressive respiratory disorder marked by chronic airflow limitation, primarily due to prolonged exposure to noxious inhalants leading to persistent inflammatory responses in the airway. The pathological process includes structural remodeling and alveolar destruction causing impaired alveolar-capillary gas exchange, manifesting clinically as exertional dyspnea, productive cough, and episodic wheezing. Pulmonary function testing confirmed the presence of obstructive ventilatory defect with a post-bronchodilator FEV1/FVC ratio below the diagnostic threshold.
+
+Management encompasses comprehensive measures beginning with cessation of exposure to the inciting agent, combined pharmacotherapy with long-acting bronchodilators including beta2-agonists and muscarinic antagonists to relieve airway obstruction, and the addition of inhaled corticosteroids to attenuate airway inflammation in cases with frequent exacerbations. Adjunctive interventions include structured pulmonary rehabilitation to mitigate deconditioning and improve exercise capacity. For advanced disease, supplemental oxygen therapy is administered to maintain adequate tissue oxygenation, and surgical options may be considered in select cases.
+
+Acute exacerbations are managed aggressively with systemic corticosteroids and targeted antimicrobial therapy if infectious etiology is suspected, as these episodes accelerate functional decline and increase morbidity. Continuous monitoring through serial spirometry and symptom evaluation guides optimization of therapeutic regimens to stabilize disease progression and enhance the patient's quality of life."
 
 *Reasoning:* 
-The given prompt is based
+The given prompt ensures that the AI understands it's audience and context. The patient is 30 years old and is definitely not a medical expert like the AI. The AI needs to summarize the information and make it more understandable for the patient. 
+
+*Expected Output:*
+You have a lung condition called COPD, which means your airways are narrowed and damaged, making it hard to breathe. This happened mainly due to long-term exposure to harmful substances, like smoke. You may feel shortness of breath, cough often, and have wheezing. Treatment will focus on stopping exposure to these irritants, using inhalers that open your airways and reduce swelling, and doing exercises to improve lung strength. If needed, oxygen therapy may be used. It's important to manage flare-ups quickly with medication. Regular check-ups will help adjust treatment and keep your breathing as good as possible.
+
+*Failure:*
+Failure could occur due to context length as the transcript/ case is 3 paragraph long.
 
 ----
 - Few-Shot PROMPT:
 
 *Prompt:*
+You are a transcription and medical expert who needs to explain to a 30 year old patient what condition they have alongwith the treatment they would be provided by the medical expert overseeing their case. Ensure you summarize it in 100 words maximum and also assess the patient's health status. Below is the a paragraph regarding it.
+
+"This case involves a progressive respiratory disorder marked by chronic airflow limitation, primarily due to prolonged exposure to noxious inhalants leading to persistent inflammatory responses in the airway. The pathological process includes structural remodeling and alveolar destruction causing impaired alveolar-capillary gas exchange, manifesting clinically as exertional dyspnea, productive cough, and episodic wheezing. Pulmonary function testing confirmed the presence of obstructive ventilatory defect with a post-bronchodilator FEV1/FVC ratio below the diagnostic threshold.
+
+Management encompasses comprehensive measures beginning with cessation of exposure to the inciting agent, combined pharmacotherapy with long-acting bronchodilators including beta2-agonists and muscarinic antagonists to relieve airway obstruction, and the addition of inhaled corticosteroids to attenuate airway inflammation in cases with frequent exacerbations. Adjunctive interventions include structured pulmonary rehabilitation to mitigate deconditioning and improve exercise capacity. For advanced disease, supplemental oxygen therapy is administered to maintain adequate tissue oxygenation, and surgical options may be considered in select cases.
+
+Acute exacerbations are managed aggressively with systemic corticosteroids and targeted antimicrobial therapy if infectious etiology is suspected, as these episodes accelerate functional decline and increase morbidity. Continuous monitoring through serial spirometry and symptom evaluation guides optimization of therapeutic regimens to stabilize disease progression and enhance the patient's quality of life."
+
+The structure of your response for it should be as follows:
+
+"You have been diagnosed with [disease], due to [cause] and will be treated as follows [treatment/ procedure]."
 
 
 *Reasoning:* 
-The given prompt is based
+The given prompt is based on the previous CLEAR prompt but now has a structured example of how the output. summary should be like. The given prompt ensures that the following format is followed by the LLM.
+
+*Expected Output:*
+
+You have been diagnosed with chronic obstructive pulmonary disease (COPD), due to long-term exposure to harmful inhalants causing damage and narrowing of your airways. Treatment will include stopping exposure to irritants, using inhalers that open your airways and reduce inflammation, and attending pulmonary rehabilitation to improve your breathing and fitness. For frequent flare-ups, corticosteroids and antibiotics may be prescribed. In advanced cases, oxygen therapy might be needed. Your health will be regularly monitored to adjust treatment and maintain lung function, aiming to improve your quality of life and reduce complications.
+
+*Failure:*
+Failure could occur if the LLM does not focus on the second half of the prompt giving the structure or it could fail due to context length constraitns.
+
 
 - Chain-of-Thought PROMPT:
 
 *Prompt:*
+You are a transcription and medical expert who needs to explain to a 30 year old patient what condition they have alongwith the treatment they would be provided by the medical expert overseeing their case. Ensure you summarize it in 100 words maximum and also assess the patient's health status. Below is the a paragraph regarding it.
 
+"This case involves a progressive respiratory disorder marked by chronic airflow limitation, primarily due to prolonged exposure to noxious inhalants leading to persistent inflammatory responses in the airway. The pathological process includes structural remodeling and alveolar destruction causing impaired alveolar-capillary gas exchange, manifesting clinically as exertional dyspnea, productive cough, and episodic wheezing. Pulmonary function testing confirmed the presence of obstructive ventilatory defect with a post-bronchodilator FEV1/FVC ratio below the diagnostic threshold.
+
+Management encompasses comprehensive measures beginning with cessation of exposure to the inciting agent, combined pharmacotherapy with long-acting bronchodilators including beta2-agonists and muscarinic antagonists to relieve airway obstruction, and the addition of inhaled corticosteroids to attenuate airway inflammation in cases with frequent exacerbations. Adjunctive interventions include structured pulmonary rehabilitation to mitigate deconditioning and improve exercise capacity. For advanced disease, supplemental oxygen therapy is administered to maintain adequate tissue oxygenation, and surgical options may be considered in select cases.
+
+Acute exacerbations are managed aggressively with systemic corticosteroids and targeted antimicrobial therapy if infectious etiology is suspected, as these episodes accelerate functional decline and increase morbidity. Continuous monitoring through serial spirometry and symptom evaluation guides optimization of therapeutic regimens to stabilize disease progression and enhance the patient's quality of life."
+
+Also give your reasoning as to why you structured your summary the way you did.
 
 *Reasoning:* 
-The given prompt is based
+The given prompt is based on the CLEAR prompt and now asks for the explanation for the given summary. This will assess how well the model performs the COT process and will be scored based on the Likert Scale for its reasoning and summarization.
 
+*Failure:*
+Context length could be a failure and an incomplete answer might be given for the same. 
 
 
 ****
