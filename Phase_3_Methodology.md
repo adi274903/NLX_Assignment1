@@ -8,7 +8,7 @@ Prompts are available in the Phase_2_Answers.md file and the output given by eac
 
 For evaluation, the given steps/ procedures were undertaken:
 
-1. The Task and prompt of each is opened in a new chat window to ensure no context is available for each of the AI model, to asses its accuracy.
+1. The Task and prompt of each is opened in a new chat window to ensure no context is available for each of the AI model. This is to ensure an unbiased response to measure its domain appropriateness each time.
 2. The response is recorded as it is and no alteration is made for the same.
 3. If 100% of the prompt is accurate, the model would receive the 5 score on the Likert Scale. If the model is partially correct or the model's reasoning is flawed, the model would receive 3 and if it's logic and answer is wrong, the model would receive 0 on the scale.
 4. The following models are assessed on their accuracy, relevance and domain appropriatness. Remarks are also given of why the model was scored as such.
