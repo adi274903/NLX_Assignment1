@@ -4,7 +4,7 @@
 
 In the given phase, the ChatGPT 4o model and Gemini 2.5 pro model's were run in their respective browser based format. The MedGemma 4b was run on a colab instance and the code for the same would be made available in the medgemma.ipynb file for running and analysis of the given model.
 
-Prompts are available in the Phase_2_Answers.md file and the output given by each model would be made available as a link to the web site or through the ipynb respectively.
+Prompts are available in the Phase_2_Answers.md file and the output given by each model would be made available as a link to the web site or through the ipynb respectively. A proper documentation is further available in the Phase_3_Results.xlsx file.
 
 For evaluation, the given steps/ procedures were undertaken:
 
