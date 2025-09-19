@@ -5,8 +5,77 @@ The following are the prompts used per task:
 ----
 **1. Classification/Analysis:**
 
-Categorizing or evaluating complex information from transcript and correctly giving the ICD, CPT and HCPCS code for the same.
+Categorizing or evaluating complex information from transcript and identifying the disease and its symptoms would be the job of the AI. Giving the ICD code would also be ideal.
 
+
+----
+- CLEAR PROMPT: 
+
+*Prompt:*
+You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Given is the paragraph for it.
+
+"This condition presents with increased thirst, frequent urination, fatigue, blurred vision, and slow-healing wounds. It is caused by the body’s ineffective use of insulin leading to elevated blood glucose levels. Diagnosis includes blood tests such as fasting glucose and HbA1c. Treatment involves lifestyle changes like a balanced diet and regular exercise to control blood sugar, oral medications like metformin, and insulin therapy if needed. Managing complications such as nerve damage, kidney issues, and cardiovascular problems is critical."
+
+*Reasoning:* 
+The given prompt ensures that the AI understands it's audience and context. The patient is 30 years old and is definitely not a medical expert like the AI. The AI needs to summarize the information and make it more understandable for the patient. 
+
+*Expected Output:*
+
+Diabetes Mellitus II, ICD 10 is E11
+
+*Failure:*
+Failure could occur due to context length as the transcript/ case is a paragraph. If the AI does not have enough medical knowledge or ICD 10 databse knowledge, the AI model will fail
+
+----
+- Few-Shot PROMPT:
+
+*Prompt:*
+You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Given is the paragraph for it.
+
+"This condition presents with increased thirst, frequent urination, fatigue, blurred vision, and slow-healing wounds. It is caused by the body’s ineffective use of insulin leading to elevated blood glucose levels. Diagnosis includes blood tests such as fasting glucose and HbA1c. Treatment involves lifestyle changes like a balanced diet and regular exercise to control blood sugar, oral medications like metformin, and insulin therapy if needed. Managing complications such as nerve damage, kidney issues, and cardiovascular problems is critical."
+
+Your response should be as follows:
+"[Disease], ICD 10 is [Code]"
+
+Here are a few examples for it:
+
+- Hypertension, ICD 10 is I10.9
+
+- Myocardial Infarction, ICD 10 is I21.9
+
+*Reasoning:* 
+The given prompt is based on the CLEAR prompt and gives exactly hwo the structure and output for it should be. 
+
+*Expected Output:*
+
+Diabetes Mellitus II, ICD 10 is E11
+
+*Failure:*
+Failure could occur due to context length as the transcript/ case is a paragraph. If the AI does not have enough medical knowledge or ICD 10 databse knowledge, the AI model will fail
+
+----
+- Chain-of-Thought PROMPT:
+  
+*Prompt:*
+You are a medical expert who can identify and evaluate the exact disease and its ICD 10 code through the case study. The given is to help the biller quickly get the disease into the system. Given is the paragraph for it.
+
+"This condition presents with increased thirst, frequent urination, fatigue, blurred vision, and slow-healing wounds. It is caused by the body’s ineffective use of insulin leading to elevated blood glucose levels. Diagnosis includes blood tests such as fasting glucose and HbA1c. Treatment involves lifestyle changes like a balanced diet and regular exercise to control blood sugar, oral medications like metformin, and insulin therapy if needed. Managing complications such as nerve damage, kidney issues, and cardiovascular problems is critical."
+
+Your response should be as follows:
+"[Disease], ICD 10 is [Code]"
+
+Also give the reasoning for the given conclusion.
+
+*Reasoning:* 
+The given prompt is based on the CLEAR prompt and asks the AI model to reason the disease. As the disease is unspecified the given output should be E11 or similair category of E11.x as these are the codes related to the given disease. 
+
+*Expected Output:*
+
+Diabetes Mellitus II, ICD 10 is E11
+Reasoning: xxxx
+
+*Failure:*
+Failure could occur due to context length as the transcript/ case is a paragraph. If the AI does not have enough medical knowledge or ICD 10 databse knowledge, the AI model will fail
 
 
 ****
@@ -93,7 +162,7 @@ Context length could be a failure and an incomplete answer might be given for th
 
 **3. Question-Answering:**
 
-The model will be assessed based on a specific prompt and its accuracy in answering the question. A dataset containing 3Q & A with the exact verifiable prognosis/ treatment/ procedure would be made to assess the model’s domain knowledge and specificity. MedQA is a dataset that would be used for evaluation.
+The model will be assessed based on a specific prompt and its accuracy in answering the question. A dataset containing diseases & with the exact verifiable ICD, CPT and HCPCS code to assess the model’s domain knowledge and specificity.ICD-CM Databse is a dataset that would be used for evaluation.
 
 ----
 - CLEAR PROMPT: 
