@@ -6,7 +6,7 @@ The following are the prompts used per task:
 **1. Classification/Analysis:**
 
 Categorizing or evaluating complex information from transcript and correctly giving the ICD, CPT and HCPCS code for the same.
-
+****
 - CLEAR PROMPT: 
 
 *Prompt:*
@@ -82,7 +82,7 @@ CPT: 99212, 99213
 The prompt could result in problems as CPT code might be a range and not just 2 numbers. The prompt might also fail if AI does refer to a different databse, which it should not due to the provided examples.
 
 
-
+****
 - Chain-of-Thought PROMPT:
 
 *Prompt:*
