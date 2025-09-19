@@ -280,4 +280,6 @@ The given prompt is based on the Few shot, CLEAR and reasoning. The given is for
 AI could always refer to other CPT codes not associated with the given disease or not in the given range as CPT codes are different based on outpatient, inpatient, etc. 
 
 
+**Pilot Testing for each one of the CLEAR prompts was done using the CHATGPT 4o model and link is below:**
+https://chatgpt.com/share/68cd6e98-aa0c-8007-b3a2-1b30c7d67493
 
