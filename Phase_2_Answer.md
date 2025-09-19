@@ -178,7 +178,7 @@ You have been diagnosed with chronic obstructive pulmonary disease (COPD), due t
 *Failure:*
 Failure could occur if the LLM does not focus on the second half of the prompt giving the structure or it could fail due to context length constraitns.
 
-
+----
 - Chain-of-Thought PROMPT:
 
 *Prompt:*
