@@ -1,3 +1,8 @@
+<h2> NLX Assignment 1 </h2>
+The following is the repository regarding the CMU course Applications of NLX and LLM
+
+Prompt the Domain - Comparing LLMs on Real-World Tasks
+
 ***Assignment Overview***
 
 **Objective:** 
