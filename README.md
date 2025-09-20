@@ -21,7 +21,6 @@ Phase 1
 v 
 
 Phase 2
-|
 
 |
 
