@@ -1,4 +1,4 @@
-<h2> NLX Assignment 1 </h2>
+<h1> NLX Assignment 1 </h1>
 The following is the repository regarding the CMU course Applications of NLX and LLM
 
 Prompt the Domain - Comparing LLMs on Real-World Tasks
